@@ -1,0 +1,30 @@
+{
+  "TechCrunch": {
+    "url": "https://techcrunch.com/feed/",
+    "enabled": false
+  },
+  "Finextra": {
+    "url": "https://www.finextra.com/rss/headlines.aspx",
+    "enabled": false
+  },
+  "PYMNTS": {
+    "url": "https://www.pymnts.com/feed/",
+    "enabled": false
+  },
+  "The Financial Brand": {
+    "url": "https://thefinancialbrand.com/feed/",
+    "enabled": false
+  },
+  "Banking Dive": {
+    "url": "https://www.bankingdive.com/feeds/news/",
+    "enabled": false
+  },
+  "American Banker": {
+    "url": "https://www.americanbanker.com/feeds/all.rss",
+    "enabled": false
+  },
+  "GlobeNewswire": {
+    "url": "https://www.globenewswire.com/RssFeed",
+    "enabled": false
+  }
+}
