@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from fuzzywuzzy import fuzz
 from openai import OpenAI
 from summarizer_intel import summarize_article, is_article_relevant
-from slack.slack_messenger import send_to_slack_block_message
+from teams.teams_messenger import send_to_teams
 from confluence.confluence_uploader import update_page_content, format_articles_as_html
 from sites import google_news, rss_reader
 # from sites import youtube
@@ -167,8 +167,8 @@ def run():
     for i in range(0, len(filtered_articles), chunk_size):
         chunk = filtered_articles[i:i + chunk_size]
         batch_number = i // chunk_size + 1
-        logging.info(f"📤 Sending batch {batch_number} of {total_batches} to Slack ({len(chunk)} articles)")
-        send_to_slack_block_message(chunk, batch_number=batch_number, total_batches=total_batches)
+        logging.info(f"📤 Sending batch {batch_number} of {total_batches} to Teams ({len(chunk)} articles)")
+        send_to_teams(chunk, batch_number=batch_number, total_batches=total_batches)
 
     try:
         html_block = format_articles_as_html(filtered_articles)
